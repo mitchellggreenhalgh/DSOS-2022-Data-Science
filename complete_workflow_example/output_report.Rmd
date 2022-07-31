@@ -1,0 +1,31 @@
+---
+title: "Workflow Report"
+author: "Matt Brousil"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r echo=FALSE}
+library(targets)
+library(tarchetypes)
+library(tidyverse)
+library(neonUtilities)
+
+tar_load(fdom_cq_plot)
+
+tar_load(nsw_cq_plot)
+
+```
+
+
+Here are the plotted results of the workflow:
+
+```{r echo=FALSE}
+fdom_cq_plot
+```
+
+
+```{r echo=FALSE}
+nsw_cq_plot
+```
+
